@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Explorando a Inteligência Artificial</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Cabeçalho do Site -->
+    <header>
+        <h1>A Revolução da Inteligência Artificial</h1>
+        <p>A tecnologia que está transformando o nosso mundo.</p>
+    </header>
+
+    <div class="container">
+
+        <!-- Seção sobre IA -->
+        <section class="section-card">
+            <h2>O que é Inteligência Artificial?</h2>
+            <p>A Inteligência Artificial (IA) é a capacidade de sistemas de computador de simular processos de pensamento humano, como aprendizado, raciocínio e autocorreção. A IA busca permitir que máquinas resolvam problemas, tomem decisões e realizem tarefas que normalmente exigem a inteligência de um ser humano.</p>
+        </section>
+
+        <!-- Seção de Recursos/Aplicações -->
+        <section class="section-card">
+            <h2>Principais Aplicações da IA</h2>
+            <ul class="features-list">
+                <li class="feature-item">
+                    <h3>Visão Computacional</h3>
+                    <p>Permite que computadores interpretem e entendam o conteúdo de imagens digitais, vídeos e outras entradas visuais.</p>
+                </li>
+                <li class="feature-item">
+                    <h3>Processamento de Linguagem Natural</h3>
+                    <p>Capacita máquinas a ler, entender e gerar texto, facilitando a comunicação entre humanos e computadores.</p>
+                </li>
+                <li class="feature-item">
+                    <h3>Aprendizado de Máquina</h3>
+                    <p>Um subcampo da IA focado em dar aos computadores a capacidade de aprender com dados sem serem explicitamente programados para cada tarefa.</p>
+                </li>
+            </ul>
+        </section>
+
+        <!-- Seção com a interatividade -->
+        <section class="section-card">
+            <h2>Gere uma Citação sobre IA</h2>
+            <div id="quote-display" class="quote-box">
+                Clique no botão abaixo para ver uma citação inspiradora sobre inteligência artificial!
+            </div>
+            <button id="generate-quote-button" class="generate-quote-button">Gerar Citação</button>
+        </section>
+
+    </div>
+
+    <!-- Rodapé do Site -->
+    <footer>
+        <p>Site de IA Criado com HTML, CSS e JavaScript | &copy; 2024</p>
+    </footer>
+
+    <!-- Script para a Interação -->
+    <script>
+        // Array de citações e fatos sobre IA
+        const quotes = [
+            "O futuro da IA não é sobre robôs substituindo humanos, mas sim sobre humanos e robôs trabalhando juntos.",
+            "Inteligência artificial é a nova eletricidade. Assim como a eletricidade transformou a indústria, a IA transformará cada setor da sociedade.",
+            "IA é a ciência e a engenharia de fazer máquinas inteligentes, especialmente programas de computador inteligentes.",
+            "Nossos cérebros são o ponto de partida para a IA. Quanto mais entendermos o cérebro, mais avançada a IA se tornará.",
+            "O aprendizado de máquina é a habilidade de um sistema de aprender com os dados sem ser programado explicitamente.",
+            "A IA já está presente em nosso dia a dia, desde a sugestão de filmes na Netflix até a assistente de voz do seu celular."
+        ];
+
+        // Obtém os elementos da página
+        const quoteDisplay = document.getElementById('quote-display');
+        const generateButton = document.getElementById('generate-quote-button');
+
+        // Adiciona um evento de clique ao botão
+        generateButton.addEventListener('click', () => {
+            // Gera um índice aleatório
+            const randomIndex = Math.floor(Math.random() * quotes.length);
+            // Atualiza o texto da caixa com a citação aleatória
+            quoteDisplay.textContent = quotes[randomIndex];
+        });
+    </script>
+
+</body>
+</html>
